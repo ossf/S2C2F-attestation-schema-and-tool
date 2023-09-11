@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://csrc.nist.gov/ns/oscal/1.6"
+ xsi:schemaLocation="http://csrc.nist.gov/ns/oscal/1.0 https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.4/xml/schema/oscal_catalog_schema.xsd"
+ uuid="bb04d23c-9107-462e-84cd-de974b179387">
+ <metadata>
+      <title>Secure Supply Chain Consumption Framework (S2C2F) Requirements</title>
+      <published>2023-09-11T11:01:04.736-04:00</published>
+      <last-modified>2023-09-11T13:57:28.355446-04:00</last-modified>
+      <version>1.1</version>
+      <oscal-version>1.0.6</oscal-version>
+      <prop name="keywords" value="contol, assessment"/>
+      <link rel="alternate" media-type="text/html"
+       href="https://github.com/ossf/s2c2f/"/>
+      <remarks>
+         <p>The following controls represent the <a href=https://github.com/ossf/s2c2f/blob/main/specification/framework.md>S2C2F v1.1</a> for the purposes of assessing secure development pracices in alignment with S2C2F requirements for a given software project or product*. Copyrights for this work are held by the Linux Foundation Open Source Security Foundation (OpenSSF).</p>
+      </remarks>
+ </metadata>
+   <group id="s1">
+      <title>S2C2F Practices</title>
+      <prop name="label" value="1"/>
+      <group id="s1.1">
+         <title>Ingest It</title>
+         <prop name="label" value="1.1"/>
+         <part id="s1.1_smt" name="objective">
+            <p>I can ship any existing asset if external OSS sources are compromised or unavailable.</p>
+         </part><control id="ing-1">
+  <title>Use public package managers trusted by your organization (i.e. NuGet.org, npmjs.com, PyPi.org, etc.)</title>
+  <prop name="label" value="ING-1"/>
+  <prop name="sort-id" value="ing-1"/>
+  <part name="statement" id="ing-1_stmt">
+   <p>Your organization benefits from the inherent security provided by the chosen trusted public package manager. Consuming open source from other sources should be deeped risky.</p>
+  </part><control id="ing-2">
+  <title>Use an OSS binary repository manager solution (i.e. JFrog Artifactory, Azure Artifacts, etc.)</title>
+  <prop name="label" value="ING-2"/>
+  <prop name="sort-id" value="ing-2"/>
+  <part name="statement" id="ing-2_stmt">
+   <p>Caches a local copy of the OSS artifact and protects against left-pad incidents, enabling developers to continue to build even if upstream resources are unavailable.</p>
+  </part><control id="ing-3">
+  <title>Have a Deny List capability to block known malicious OSS from being consumed</title>
+  <prop name="label" value="ING-3"/>
+  <prop name="sort-id" value="ing-3"/>
+  <part name="statement" id="ing-3_stmt">
+   <p>Prevents ingestion of known malware by blocking ingestion as soon as a critically vulnerable OSS component is identified, such as colors v 1.4.1, or if an OSS component is deemed malicious.</p>
+  </part><control id="ing-4">
+  <title>Mirror a copy of all OSS source code to an internal location</title>
+  <prop name="label" value="ING-4"/>
+  <prop name="sort-id" value="ing-4"/>
+  <part name="statement" id="ing-4_stmt">
+   <p>Business Continuity and Disaster Recovery (BCDR) scenarios. Also enables proactive security scanning, fix it scenarios, and ability to rebuild OSS in a trusted build environment.</p>
+  </part>
+  </control>
+  </group>
+  <group id="s1.2">
+         <title>Scan It</title>
+         <prop name="label" value="1.2"/>
+         <part id="s1.2_smt" name="objective">
+            <p>I know if any OSS artifact in my pipeline has vulnerabilities or malware.</p>
+         </part><control id="sca-1">
+  <title>Scan OSS for known vulnerabilities (i.e. CVEs, GitHub Advisories, etc.)</title>
+  <prop name="label" value="SCA-1"/>
+  <prop name="sort-id" value="sca-1"/>
+  <part name="statement" id="sca-1_stmt">
+   <p>Able to update OSS to reduce risks.</p>
+  </part><control id="sca-2">
+  <title>Scan OSS for licenses</title>
+  <prop name="label" value="SCA-2"/>
+  <prop name="sort-id" value="sca-2"/>
+  <part name="statement" id="sca-2_stmt">
+   <p>Ensure your organization remains in compliance with the software license.</p>
+  </part><control id="sca-3">
+  <title>Scan OSS to determine if its end-of-life</title>
+  <prop name="label" value="SCA-3"/>
+  <prop name="sort-id" value="sca-3"/>
+  <part name="statement" id="sca-3_stmt">
+   <p>"For security purposes, no organization should take a dependency on software that is no longer receiving updates.</p>
+  </part><control id="sca-4">
+  <title>Scan OSS for malware</title>
+  <prop name="label" value="SCA-4"/>
+  <prop name="sort-id" value="sca-4"/>
+  <part name="statement" id="sca-4_stmt">
+   <p>Able to prevent ingestion of malware into your CI/CD environment.</p>
+  </part><control id="sca-5">
+  <title>Perform proactive security review of OSS</title>
+  <prop name="label" value="SCA-5"/>
+  <prop name="sort-id" value="sca-5"/>
+  <part name="statement" id="sca-5_stmt">
+   <p>Identify zero-day vulnerabilities and confidentially contribute fixes back to the upstream maintainer.</p>
+  </part>
+  </control>
+  </group>
+  <group id="s1.3">
+         <title>Inventory It</title>
+         <prop name="label" value="1.3"/>
+         <part id="s1.3_smt" name="objective">
+            <p>I know where OSS artifacts are deployed in production.</p>
+         </part><control id="inv-1">
+  <title>Maintain an automated inventory of all OSS used in development</title>
+  <prop name="label" value="inv-1"/>
+  <prop name="sort-id" value="inv-1"/>
+  <part name="statement" id="inv-1_stmt">
+   <p>Able to respond to incidents by knowing who is using what OSS where. This can also be accomplished by generating SBOMs for your software.</p>
+  </part><control id="inv-2">
+  <title>Have an OSS Incident Response Plan</title>
+  <prop name="label" value="INV-2"/>
+  <prop name="sort-id" value="inv-2"/>
+  <part name="statement" id="inv-2_stmt">
+   <p>This is a defined, repeatable process that enables your organization to quickly respond to reported OSS incidents.</p>
+   </part>
+  </control>
+  </group>
+  <group id="s1.4">
+         <title>Update It</title>
+         <prop name="label" value="1.4"/>
+         <part id="s1.4_smt" name="objective">
+            <p>I can deploy updated external artifacts soon after an update becomes publicly available.</p>
+         </part><control id="upd-1">
+  <title>Update vulnerable OSS manually</title>
+  <prop name="label" value="UPD-1"/>
+  <prop name="sort-id" value="upd-1"/>
+  <part name="statement" id="upd-1_stmt">
+   <p>Ability to resolve vulnerabilities.</p>
+  </part><control id="upd-2">
+  <title>Enable automated OSS updates</title>
+  <prop name="label" value="UPD-2"/>
+  <prop name="sort-id" value="upd-2"/>
+  <part name="statement" id="upd-2_stmt">
+   <p>Improve MTTR to patch faster than adversaries can operate.</p>
+  </part><control id="upd-3">
+  <title>Display OSS vulnerabilities as comments in Pull Requests (PRs).</title>
+  <prop name="label" value="UPD-3"/>
+  <prop name="sort-id" value="upd-3"/>
+  <part name="statement" id="upd-3_stmt">
+   <p>PR reviewer doesn't want to approve knowing that there are unaddressed vulnerabilities.</p>
+  </part>
+  </control>
+  </group>
+  <group id="s1.5">
+         <title>Audit It</title>
+         <prop name="label" value="1.5"/>
+         <part id="s1.5_smt" name="objective">
+            <p>I can prove that every OSS artifact in production has a full chain-of-custody from the original artifact source and is consumed through the official supply chain.</p>
+         </part><control id="aud-1">
+  <title>Verify the provenance of your OSS</title>
+  <prop name="label" value="AUD-1"/>
+  <prop name="sort-id" value="aud-1"/>
+  <part name="statement" id="aud-1_stmt">
+   <p>Able to track that a given OSS package traces back to a repo</p>
+  </part><control id="aud-2">
+  <title>Audit that developers are consuming OSS through the approved ingestion method</title>
+  <prop name="label" value="AUD-2"/>
+  <prop name="sort-id" value="aud-2"/>
+  <part name="statement" id="aud-2_stmt">
+   <p>Detect when developers consume OSS that isn't detected by your inventory or scan tools.</p>
+   </part><control id="aud-3">
+  <title>Validate integrity of the OSS that you consume into your build</title>
+  <prop name="label" value="AUD-3"/>
+  <prop name="sort-id" value="aud-3"/>
+  <part name="statement" id="aud-3_stmt">
+   <p>Validate digital signature or hash match for each component</p>
+   </part><control id="aud-4">
+  <title>Validate SBOMs of OSS that you consume into your build</title>
+  <prop name="label" value="AUD-4"/>
+  <prop name="sort-id" value="aud-4"/>
+  <part name="statement" id="aud-4_stmt">
+   <p>Validate SBOM for provenance data, dependencies, and its digital signature for SBOM integrity</p> 
+   </part>
+  </control>
+  </group>
+  <group id="s1.5">
+         <title>Enforce It</title>
+         <prop name="label" value="1.6"/>
+         <part id="s1.6_smt" name="objective">
+            <p>I can rely on secure and trusted OSS consumption within my organization.</p>
+         </part><control id="enf-1">
+  <title>Securely configure your package source files (i.e. nuget.config, .npmrc, pip.conf, pom.xml, etc.)</title>
+  <prop name="label" value="ENF-1"/>
+  <prop name="sort-id" value="enf-1"/>
+  <part name="statement" id="enf-1_stmt">
+   <p>By using NuGet package source mapping, or a single upstream feed, or using version pinning and lock files, you can protect yourself from race conditions and Dependency Confusion attacks</p>
+  </part><control id="enf-2">
+  <title>Enforce usage of a curated OSS feed that enhances the trust of your OSS</title>
+  <prop name="label" value="ENF-2"/>
+  <prop name="sort-id" value="enf-2"/>
+  <part name="statement" id="enf-2_stmt">
+   <p>Curated OSS feeds can be systems that scan OSS for malware, validate claims-metadata about the component, or systems that enforce an allow/deny list. Developers should not be allowed to consume OSS outside of the curated OSS feed</p>
+   </part>
+  </control>
+  </group>
+  <group id="s1.7">
+         <title>Rebuild It</title>
+         <prop name="label" value="1.7"/>
+         <part id="s1.7_smt" name="objective">
+            <p>I can rebuild from source code every OSS artifact I'm deploying.</p>
+         </part><control id="reb-1">
+  <title>Rebuild the OSS in a trusted build environment, or validate that it is reproducibly built.</title>
+  <prop name="label" value="REB-1"/>
+  <prop name="sort-id" value="reb-1"/>
+  <part name="statement" id="reb-1_stmt">
+   <p>Mitigates against build-time attacks such as those seen on CCleaner and SolarWinds. Open Source developers could introduce scripts or code that aren't present in the repository into the build process or be building in a compromised environment.</p>
+  </part><control id="reb-2">
+  <title>Digitally sign the OSS you rebuild</title>
+  <prop name="label" value="REB-2"/>
+  <prop name="sort-id" value="reb-2"/>
+  <part name="statement" id="reb-2_stmt">
+   <p>Protect the integrity of the OSS you use.</p>
+   </part><control id="reb-3">
+  <title>Generate SBOMs for OSS that you rebuild</title>
+  <prop name="label" value="REB-3"/>
+  <prop name="sort-id" value="reb-3"/>
+  <part name="statement" id="reb-3_stmt">
+   <p>Captures the supply chain information for each package to enable you to better maintain your dependencies, auditability, and blast radius assessments</p>
+   </part><control id="reb-4">
+  <title>Digitally sign the SBOMs you produce</title>
+  <prop name="label" value="REB-4"/>
+  <prop name="sort-id" value="reb-4"/>
+  <part name="statement" id="reb-4_stmt">
+   <p>Ensures that consumers of your SBOMs can trust that the contents have not been tampered with</p> 
+     </part>
+  </control>
+  </group>
+  <group id="s1.7">
+         <title>Fix It and Upstream</title>
+         <prop name="label" value="1.8"/>
+         <part id="s1.8_smt" name="objective">
+            <p>I can privately patch, build, and deploy any external artifact within 3 days of harm notification and confidentially contribute the fix to the upstream maintainer.</p>
+         </part><control id="fix-1">
+  <title>Implement a change in the code to address a zero-day vulnerability, rebuild, deploy to your organization, and confidentially contribute the fix to the upstream maintainer</title>
+  <prop name="label" value="FIX-1"/>
+  <prop name="sort-id" value="fix-1"/>
+  <part name="statement" id="fix-1_stmt">
+   <p>To be used only in extreme circumstances when the risk is too great and to be used temporarily until the upstream maintainer issues a fix.</p>
+  </part>
+  </control>
+ </control>
+</catalog>

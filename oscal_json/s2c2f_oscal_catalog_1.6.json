@@ -1,0 +1,197 @@
+{
+  "catalog": {
+    "uuid": "bb04d23c-9107-462e-84cd-de974b179387"
+    "metadata": {
+      "title": "Secure Supply Chain Consumption Framework (S2C2F)",
+      "published": "2023-09-11T09:01:04.736-04:00",
+      "last-modified": "2021-09-11T09:57:28.355446-04:00",
+      "version": "1.1",
+      "oscal-version": "1.0.6",
+      "remarks": "The following controls represent the [S2C2F v1.1](https://github.com/ossf/s2c2f/blob/main/specification/framework.md), *for the purposes of assessing secure development pracices in alignment with S2C2F requirements for a given software project or product*. Copyrights for this work are held by the Linux Foundation Open Source Security Foundation (OpenSSF)."
+    },
+"parties" : [ {
+        "uuid" : "b600d3d6-6716-47c9-839f-fb62cfcb9151",
+        "type" : "organization",
+        "name" : "Linux Foundation Open Source Security Foundation",
+        "short-name" : "OpenSSF",
+        "links" : [ {
+          "href" : "https://github.com/ossf/s2c2f",
+          "rel" : "homepage"
+    "groups": [
+        {
+          "id": "g1",
+          "title": "Group of Groups",
+          "props": [
+            {
+              "name": "label",
+              "value": "g1"
+            }
+            ],
+            "groups": [
+            {
+                "id": "ING",
+                "title": "Ingest It",
+                "props": [
+                {
+                    "name": "label",
+                    "value": "1"
+                }
+                ],
+                "controls": [
+                    {
+                        "id": "ING-1",
+                        "title": "Use public package managers trusted by your organization (i.e. NuGet.org, npmjs.com, PyPi.org, etc.)"
+                    }
+                    ],
+                    "parts": [
+                        {
+                        "id": "ING-1_stm",
+                        "name": "statement",
+                        "prose": "Your organization benefits from the inherent security provided by the chosen trusted public package manager. Consuming open source from other sources should be deeped risky."
+                        }
+                    ],
+                "controls": [
+                    {
+                        "id": "ING-2",
+                        "title": "Use an OSS binary repository manager solution (i.e. JFrog Artifactory, Azure Artifacts, etc.)",
+                    }
+                    ],
+                    "parts": [
+                        {
+                        "id": "ING-2_stm",
+                        "name": "statement",
+                        "prose": "Caches a local copy of the OSS artifact and protects against left-pad incidents, enabling developers to continue to build even if upstream resources are unavailable."
+                        }
+                    ],
+                "controls": [
+                    {
+                          "id": "ING-3",
+                          "title": "Have a Deny List capability to block known malicious OSS from being consumed",
+                    }
+                    ],
+                    "parts": [
+                    {
+                        "id": "ING-3_stm",
+                        "name": "statement",
+                        "prose": "n/a"
+                    }
+                    ]
+                  "controls": [
+                    {
+                      "id": "ING-4",
+                      "title": "Mirror a copy of all OSS source code to an internal location",
+                    }
+                    ],
+                    "parts": [
+                    {
+                        "id": "ING-4_stm",
+                        "name": "statement",
+                        "prose": "n/a"
+                    }
+                    ]
+                }
+                ]
+
+            }
+            ],
+            "groups": [
+                {
+                    "id": "SCA",
+                    "title": "Scan it",
+                    "props": [
+                    {
+                        "name": "label",
+                        "value": "2"
+                    }
+                    ],
+                    
+                    "controls": [
+                        {
+                        "id": "SCA-1",
+                        "title": "Scan OSS for known vulnerabilities (i.e. CVEs, GitHub Advisories, etc.)",
+                    }
+                    ],
+                        "parts": [
+                        {
+                            "id": "SCA-1_stm",
+                            "name": "statement",
+                            "prose": "Dependency Graph"
+                        }
+                        ]
+                    }
+                    ],
+                    
+                    "controls": [
+                        {
+                        "id": "SCA-2",
+                        "title": "Scan OSS for licenses",
+
+                        "parts": [
+                        {
+                            "id": "SCA-2_stm",
+                            "name": "statement",
+                            "prose": "Dependency Graph"
+                        }
+                        ]
+                    }
+                    ],
+
+                    "controls": [
+                        {
+                        "id": "SCA-3",
+                        "title": "Scan OSS to determine if its end-of-life",
+
+                        "parts": [
+                        {
+                            "id": "SCA-3_stm",
+                            "name": "statement",
+                            "prose": "TBD"
+                        }
+                        ]
+                    }
+                    ],
+
+                    "controls": [
+                        {
+                        "id": "SCA-4",
+                        "title": "Scan OSS for malware",
+
+                        "parts": [
+                        {
+                            "id": "SCA-4_stm",
+                            "name": "statement",
+                            "prose": "Dependency Graph"
+                        }
+                        ]
+                    }
+                    ],
+
+                    "controls": [
+                        {
+                        "id": "SCA-5",
+                        "title": "Perform proactive security review of OSS",
+
+                        "parts": [
+                        {
+                            "id": "SCA-5_stm",
+                            "name": "statement",
+                            "prose": "n/a"
+                        }
+                        ]
+                    }
+                    ]
+
+
+                }
+                ]
+
+
+
+
+
+
+
+
+        }
+    ]
+}
