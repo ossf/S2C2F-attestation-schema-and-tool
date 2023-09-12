@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns="http://csrc.nist.gov/ns/oscal/1.6"
- xsi:schemaLocation="http://csrc.nist.gov/ns/oscal/1.0 https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.4/xml/schema/oscal_catalog_schema.xsd"
+ xmlns="https://pages.nist.gov/OSCAL-Reference/models/v1.0.6/"
+ xsi:schemaLocation="https://pages.nist.gov/OSCAL-Reference/models/v1.0.6/ https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.6/xml/schema/oscal_catalog_schema.xsd"
  uuid="bb04d23c-9107-462e-84cd-de974b179387">
  <metadata>
       <title>Secure Supply Chain Consumption Framework (S2C2F) Requirements</title>
