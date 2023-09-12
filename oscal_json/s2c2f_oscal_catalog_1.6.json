@@ -1,197 +1,755 @@
 {
-  "catalog": {
-    "uuid": "bb04d23c-9107-462e-84cd-de974b179387"
-    "metadata": {
-      "title": "Secure Supply Chain Consumption Framework (S2C2F)",
-      "published": "2023-09-11T09:01:04.736-04:00",
-      "last-modified": "2021-09-11T09:57:28.355446-04:00",
-      "version": "1.1",
-      "oscal-version": "1.0.6",
-      "remarks": "The following controls represent the [S2C2F v1.1](https://github.com/ossf/s2c2f/blob/main/specification/framework.md), *for the purposes of assessing secure development pracices in alignment with S2C2F requirements for a given software project or product*. Copyrights for this work are held by the Linux Foundation Open Source Security Foundation (OpenSSF)."
-    },
-"parties" : [ {
-        "uuid" : "b600d3d6-6716-47c9-839f-fb62cfcb9151",
-        "type" : "organization",
-        "name" : "Linux Foundation Open Source Security Foundation",
-        "short-name" : "OpenSSF",
-        "links" : [ {
-          "href" : "https://github.com/ossf/s2c2f",
-          "rel" : "homepage"
-    "groups": [
-        {
-          "id": "g1",
-          "title": "Group of Groups",
-          "props": [
-            {
-              "name": "label",
-              "value": "g1"
-            }
-            ],
-            "groups": [
-            {
-                "id": "ING",
-                "title": "Ingest It",
-                "props": [
-                {
-                    "name": "label",
-                    "value": "1"
-                }
-                ],
-                "controls": [
-                    {
-                        "id": "ING-1",
-                        "title": "Use public package managers trusted by your organization (i.e. NuGet.org, npmjs.com, PyPi.org, etc.)"
-                    }
-                    ],
-                    "parts": [
-                        {
-                        "id": "ING-1_stm",
-                        "name": "statement",
-                        "prose": "Your organization benefits from the inherent security provided by the chosen trusted public package manager. Consuming open source from other sources should be deeped risky."
-                        }
-                    ],
-                "controls": [
-                    {
-                        "id": "ING-2",
-                        "title": "Use an OSS binary repository manager solution (i.e. JFrog Artifactory, Azure Artifacts, etc.)",
-                    }
-                    ],
-                    "parts": [
-                        {
-                        "id": "ING-2_stm",
-                        "name": "statement",
-                        "prose": "Caches a local copy of the OSS artifact and protects against left-pad incidents, enabling developers to continue to build even if upstream resources are unavailable."
-                        }
-                    ],
-                "controls": [
-                    {
-                          "id": "ING-3",
-                          "title": "Have a Deny List capability to block known malicious OSS from being consumed",
-                    }
-                    ],
-                    "parts": [
-                    {
-                        "id": "ING-3_stm",
-                        "name": "statement",
-                        "prose": "n/a"
-                    }
-                    ]
-                  "controls": [
-                    {
-                      "id": "ING-4",
-                      "title": "Mirror a copy of all OSS source code to an internal location",
-                    }
-                    ],
-                    "parts": [
-                    {
-                        "id": "ING-4_stm",
-                        "name": "statement",
-                        "prose": "n/a"
-                    }
-                    ]
-                }
-                ]
-
-            }
-            ],
-            "groups": [
-                {
-                    "id": "SCA",
-                    "title": "Scan it",
-                    "props": [
-                    {
-                        "name": "label",
-                        "value": "2"
-                    }
-                    ],
-                    
-                    "controls": [
-                        {
-                        "id": "SCA-1",
-                        "title": "Scan OSS for known vulnerabilities (i.e. CVEs, GitHub Advisories, etc.)",
-                    }
-                    ],
-                        "parts": [
-                        {
-                            "id": "SCA-1_stm",
-                            "name": "statement",
-                            "prose": "Dependency Graph"
-                        }
-                        ]
-                    }
-                    ],
-                    
-                    "controls": [
-                        {
-                        "id": "SCA-2",
-                        "title": "Scan OSS for licenses",
-
-                        "parts": [
-                        {
-                            "id": "SCA-2_stm",
-                            "name": "statement",
-                            "prose": "Dependency Graph"
-                        }
-                        ]
-                    }
-                    ],
-
-                    "controls": [
-                        {
-                        "id": "SCA-3",
-                        "title": "Scan OSS to determine if its end-of-life",
-
-                        "parts": [
-                        {
-                            "id": "SCA-3_stm",
-                            "name": "statement",
-                            "prose": "TBD"
-                        }
-                        ]
-                    }
-                    ],
-
-                    "controls": [
-                        {
-                        "id": "SCA-4",
-                        "title": "Scan OSS for malware",
-
-                        "parts": [
-                        {
-                            "id": "SCA-4_stm",
-                            "name": "statement",
-                            "prose": "Dependency Graph"
-                        }
-                        ]
-                    }
-                    ],
-
-                    "controls": [
-                        {
-                        "id": "SCA-5",
-                        "title": "Perform proactive security review of OSS",
-
-                        "parts": [
-                        {
-                            "id": "SCA-5_stm",
-                            "name": "statement",
-                            "prose": "n/a"
-                        }
-                        ]
-                    }
-                    ]
-
-
-                }
-                ]
-
-
-
-
-
-
-
-
-        }
-    ]
+	"catalog": {
+		"metadata": {
+			"title": "Secure Supply Chain Consumption Framework (S2C2F) Requirements",
+			"published": "2023-09-11T11:01:04.736-04:00",
+			"last-modified": "2023-09-11T13:57:28.355446-04:00",
+			"version": "1.1",
+			"oscal-version": "1.0.6",
+			"prop": {
+				"_name": "keywords",
+				"_value": "contol, assessment"
+			},
+			"link": {
+				"_rel": "alternate",
+				"_media-type": "text/html",
+				"_href": "https://github.com/ossf/s2c2f/"
+			},
+			"remarks": {
+				"p": "The following controls represent the \n\t\t\t\tS2C2F v1.1 (https://github.com/ossf/s2c2f/blob/main/specification/framework.md) for the purposes of assessing secure development pracices in alignment with S2C2F requirements for a given software project or product*. Copyrights for this work are held by the Linux Foundation Open Source Security Foundation (OpenSSF)."
+			}
+		},
+		"groups": {
+			"title": "S2C2F Practices",
+			"prop": {
+				"_name": "label",
+				"_value": "1"
+			},
+			"group": [
+				{
+					"title": "Ingest It",
+					"prop": {
+						"_name": "label",
+						"_value": "1.1"
+					},
+					"part": {
+						"p": "I can ship any existing asset if external OSS sources are compromised or unavailable.",
+						"_id": "s1.1_smt",
+						"_name": "objective"
+					},
+					"control": [
+						{
+							"title": "Use public package managers trusted by your organization (i.e. NuGet.org, npmjs.com, PyPi.org, etc.)",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "ING-1"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "ing-1"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "1"
+								}
+							],
+							"part": {
+								"p": "Your organization benefits from the inherent security provided by the chosen trusted public package manager. Consuming open source from other sources should be deeped risky.",
+								"_name": "statement",
+								"_id": "ing-1_stmt"
+							},
+							"_id": "ing-1"
+						},
+						{
+							"title": "Use an OSS binary repository manager solution (i.e. JFrog Artifactory, Azure Artifacts, etc.)",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "ING-2"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "ing-2"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "1"
+								}
+							],
+							"part": {
+								"p": "Caches a local copy of the OSS artifact and protects against left-pad incidents, enabling developers to continue to build even if upstream resources are unavailable.",
+								"_name": "statement",
+								"_id": "ing-2_stmt"
+							},
+							"_id": "ing-2"
+						},
+						{
+							"title": "Have a Deny List capability to block known malicious OSS from being consumed",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "ING-3"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "ing-3"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "3"
+								}
+							],
+							"part": {
+								"p": "Prevents ingestion of known malware by blocking ingestion as soon as a critically vulnerable OSS component is identified, such as colors v 1.4.1, or if an OSS component is deemed malicious.",
+								"_name": "statement",
+								"_id": "ing-3_stmt"
+							},
+							"_id": "ing-3"
+						},
+						{
+							"title": "Mirror a copy of all OSS source code to an internal location",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "ING-4"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "ing-4"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "3"
+								}
+							],
+							"part": {
+								"p": "Business Continuity and Disaster Recovery (BCDR) scenarios. Also enables proactive security scanning, fix it scenarios, and ability to rebuild OSS in a trusted build environment.",
+								"_name": "statement",
+								"_id": "ing-4_stmt"
+							},
+							"_id": "ing-4"
+						}
+					],
+					"_id": "s1.1"
+				},
+				{
+					"title": "Scan It",
+					"prop": {
+						"_name": "label",
+						"_value": "1.2"
+					},
+					"part": {
+						"p": "I know if any OSS artifact in my pipeline has vulnerabilities or malware.",
+						"_id": "s1.2_smt",
+						"_name": "objective"
+					},
+					"control": [
+						{
+							"title": "Scan OSS for known vulnerabilities (i.e. CVEs, GitHub Advisories, etc.)",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "SCA-1"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "sca-1"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "1"
+								}
+							],
+							"part": {
+								"p": "Able to update OSS to reduce risks.",
+								"_name": "statement",
+								"_id": "sca-1_stmt"
+							},
+							"_id": "sca-1"
+						},
+						{
+							"title": "Scan OSS for licenses",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "SCA-2"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "sca-2"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "1"
+								}
+							],
+							"part": {
+								"p": "Ensure your organization remains in compliance with the software license.",
+								"_name": "statement",
+								"_id": "sca-2_stmt"
+							},
+							"_id": "sca-2"
+						},
+						{
+							"title": "Scan OSS to determine if its end-of-life",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "SCA-3"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "sca-3"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "2"
+								}
+							],
+							"part": {
+								"p": "\"For security purposes, no organization should take a dependency on software that is no longer receiving updates.",
+								"_name": "statement",
+								"_id": "sca-3_stmt"
+							},
+							"_id": "sca-3"
+						},
+						{
+							"title": "Scan OSS for malware",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "SCA-4"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "sca-4"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "3"
+								}
+							],
+							"part": {
+								"p": "Able to prevent ingestion of malware into your CI/CD environment.",
+								"_name": "statement",
+								"_id": "sca-4_stmt"
+							},
+							"_id": "sca-4"
+						},
+						{
+							"title": "Perform proactive security review of OSS",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "SCA-5"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "sca-5"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "3"
+								}
+							],
+							"part": {
+								"p": "Identify zero-day vulnerabilities and confidentially contribute fixes back to the upstream maintainer.",
+								"_name": "statement",
+								"_id": "sca-5_stmt"
+							},
+							"_id": "sca-5"
+						}
+					],
+					"_id": "s1.2"
+				},
+				{
+					"title": "Inventory It",
+					"prop": {
+						"_name": "label",
+						"_value": "1.3"
+					},
+					"part": {
+						"p": "I know where OSS artifacts are deployed in production.",
+						"_id": "s1.3_smt",
+						"_name": "objective"
+					},
+					"control": [
+						{
+							"title": "Maintain an automated inventory of all OSS used in development",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "inv-1"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "inv-1"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "1"
+								}
+							],
+							"part": {
+								"p": "Able to respond to incidents by knowing who is using what OSS where. This can also be accomplished by generating SBOMs for your software.",
+								"_name": "statement",
+								"_id": "inv-1_stmt"
+							},
+							"_id": "inv-1"
+						},
+						{
+							"title": "Have an OSS Incident Response Plan",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "INV-2"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "inv-2"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "2"
+								}
+							],
+							"part": {
+								"p": "This is a defined, repeatable process that enables your organization to quickly respond to reported OSS incidents.",
+								"_name": "statement",
+								"_id": "inv-2_stmt"
+							},
+							"_id": "inv-2"
+						}
+					],
+					"_id": "s1.3"
+				},
+				{
+					"title": "Update It",
+					"prop": {
+						"_name": "label",
+						"_value": "1.4"
+					},
+					"part": {
+						"p": "I can deploy updated external artifacts soon after an update becomes publicly available.",
+						"_id": "s1.4_smt",
+						"_name": "objective"
+					},
+					"control": [
+						{
+							"title": "Update vulnerable OSS manually",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "UPD-1"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "upd-1"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "1"
+								}
+							],
+							"part": {
+								"p": "Ability to resolve vulnerabilities.",
+								"_name": "statement",
+								"_id": "upd-1_stmt"
+							},
+							"_id": "upd-1"
+						},
+						{
+							"title": "Enable automated OSS updates",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "UPD-2"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "upd-2"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "2"
+								}
+							],
+							"part": {
+								"p": "Improve MTTR to patch faster than adversaries can operate.",
+								"_name": "statement",
+								"_id": "upd-2_stmt"
+							},
+							"_id": "upd-2"
+						},
+						{
+							"title": "Display OSS vulnerabilities as comments in Pull Requests (PRs).",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "UPD-3"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "upd-3"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "2"
+								}
+							],
+							"part": {
+								"p": "PR reviewer doesn't want to approve knowing that there are unaddressed vulnerabilities.",
+								"_name": "statement",
+								"_id": "upd-3_stmt"
+							},
+							"_id": "upd-3"
+						}
+					],
+					"_id": "s1.4"
+				},
+				{
+					"title": "Audit It",
+					"prop": {
+						"_name": "label",
+						"_value": "1.5"
+					},
+					"part": {
+						"p": "I can prove that every OSS artifact in production has a full chain-of-custody from the original artifact source and is consumed through the official supply chain.",
+						"_id": "s1.5_smt",
+						"_name": "objective"
+					},
+					"control": [
+						{
+							"title": "Verify the provenance of your OSS",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "AUD-1"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "aud-1"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "3"
+								}
+							],
+							"part": {
+								"p": "Able to track that a given OSS package traces back to a repo",
+								"_name": "statement",
+								"_id": "aud-1_stmt"
+							},
+							"_id": "aud-1"
+						},
+						{
+							"title": "Audit that developers are consuming OSS through the approved ingestion method",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "AUD-2"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "aud-2"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "2"
+								}
+							],
+							"part": {
+								"p": "Detect when developers consume OSS that isn't detected by your inventory or scan tools.",
+								"_name": "statement",
+								"_id": "aud-2_stmt"
+							},
+							"_id": "aud-2"
+						},
+						{
+							"title": "Validate integrity of the OSS that you consume into your build",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "AUD-3"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "aud-3"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "2"
+								}
+							],
+							"part": {
+								"p": "Validate digital signature or hash match for each component",
+								"_name": "statement",
+								"_id": "aud-3_stmt"
+							},
+							"_id": "aud-3"
+						},
+						{
+							"title": "Validate SBOMs of OSS that you consume into your build",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "AUD-4"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "aud-4"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "4"
+								}
+							],
+							"part": {
+								"p": "Validate SBOM for provenance data, dependencies, and its digital signature for SBOM integrity",
+								"_name": "statement",
+								"_id": "aud-4_stmt"
+							},
+							"_id": "aud-4"
+						}
+					],
+					"_id": "s1.5"
+				},
+				{
+					"title": "Enforce It",
+					"prop": {
+						"_name": "label",
+						"_value": "1.6"
+					},
+					"part": {
+						"p": "I can rely on secure and trusted OSS consumption within my organization.",
+						"_id": "s1.6_smt",
+						"_name": "objective"
+					},
+					"control": [
+						{
+							"title": "Securely configure your package source files (i.e. nuget.config, .npmrc, pip.conf, pom.xml, etc.)",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "ENF-1"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "enf-1"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "2"
+								}
+							],
+							"part": {
+								"p": "By using NuGet package source mapping, or a single upstream feed, or using version pinning and lock files, you can protect yourself from race conditions and Dependency Confusion attacks",
+								"_name": "statement",
+								"_id": "enf-1_stmt"
+							},
+							"_id": "enf-1"
+						},
+						{
+							"title": "Enforce usage of a curated OSS feed that enhances the trust of your OSS",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "ENF-2"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "enf-2"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "3"
+								}
+							],
+							"part": {
+								"p": "Curated OSS feeds can be systems that scan OSS for malware, validate claims-metadata about the component, or systems that enforce an allow/deny list. Developers should not be allowed to consume OSS outside of the curated OSS feed.",
+								"_name": "statement",
+								"_id": "enf-2_stmt"
+							},
+							"_id": "enf-2"
+						}
+					],
+					"_id": "s1.5"
+				},
+				{
+					"title": "Rebuild It",
+					"prop": {
+						"_name": "label",
+						"_value": "1.7"
+					},
+					"part": {
+						"p": "I can rebuild from source code every OSS artifact I'm deploying.",
+						"_id": "s1.7_smt",
+						"_name": "objective"
+					},
+					"control": [
+						{
+							"title": "Rebuild the OSS in a trusted build environment, or validate that it is reproducibly built.",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "REB-1"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "reb-1"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "4"
+								}
+							],
+							"part": {
+								"p": "Mitigates against build-time attacks such as those seen on CCleaner and SolarWinds. Open Source developers could introduce scripts or code that aren't present in the repository into the build process or be building in a compromised environment.",
+								"_name": "statement",
+								"_id": "reb-1_stmt"
+							},
+							"_id": "reb-1"
+						},
+						{
+							"title": "Digitally sign the OSS you rebuild",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "REB-2"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "reb-2"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "4"
+								}
+							],
+							"part": {
+								"p": "Protect the integrity of the OSS you use.",
+								"_name": "statement",
+								"_id": "reb-2_stmt"
+							},
+							"_id": "reb-2"
+						},
+						{
+							"title": "Generate SBOMs for OSS that you rebuild",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "REB-3"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "reb-3"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "4"
+								}
+							],
+							"part": {
+								"p": "Captures the supply chain information for each package to enable you to better maintain your dependencies, auditability, and blast radius assessments",
+								"_name": "statement",
+								"_id": "reb-3_stmt"
+							},
+							"_id": "reb-3"
+						},
+						{
+							"title": "Digitally sign the SBOMs you produce",
+							"prop": [
+								{
+									"_name": "label",
+									"_value": "REB-4"
+								},
+								{
+									"_name": "sort-id",
+									"_value": "reb-4"
+								},
+								{
+									"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+									"_name": "maturity-level",
+									"_value": "4"
+								}
+							],
+							"part": {
+								"p": "Ensures that consumers of your SBOMs can trust that the contents have not been tampered with",
+								"_name": "statement",
+								"_id": "reb-4_stmt"
+							},
+							"_id": "reb-4"
+						}
+					],
+					"_id": "s1.7"
+				},
+				{
+					"title": "Fix It and Upstream",
+					"prop": {
+						"_name": "label",
+						"_value": "1.8"
+					},
+					"part": {
+						"p": "I can privately patch, build, and deploy any external artifact within 3 days of harm notification and confidentially contribute the fix to the upstream maintainer.",
+						"_id": "s1.8_smt",
+						"_name": "objective"
+					},
+					"control": {
+						"title": "Implement a change in the code to address a zero-day vulnerability, rebuild, deploy to your organization, and confidentially contribute the fix to the upstream maintainer",
+						"prop": [
+							{
+								"_name": "label",
+								"_value": "FIX-1"
+							},
+							{
+								"_name": "sort-id",
+								"_value": "fix-1"
+							},
+							{
+								"_ns": "https://github.com/ossf/s2c2f/blob/main/specification/framework.md",
+								"_name": "maturity-level",
+								"_value": "4"
+							}
+						],
+						"part": {
+							"p": "To be used only in extreme circumstances when the risk is too great and to be used temporarily until the upstream maintainer issues a fix.",
+							"_name": "statement",
+							"_id": "fix-1_stmt"
+						},
+						"_id": "fix-1"
+					},
+					"_id": "s1.7"
+				}
+			],
+			"_id": "s1"
+		},
+		"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"_xmlns": "https://pages.nist.gov/OSCAL-Reference/models/v1.0.6/",
+		"_xsi:schemaLocation": "https://pages.nist.gov/OSCAL-Reference/models/v1.0.6/ https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.6/xml/schema/oscal_catalog_schema.xsd",
+		"_uuid": "bb04d23c-9107-462e-84cd-de974b179387"
+	}
 }
