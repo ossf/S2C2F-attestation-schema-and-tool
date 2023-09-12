@@ -37,8 +37,7 @@
         },
         "back-matter": { "$ref": "#assembly_oscal-metadata_back-matter" }
       },
-      "required": ["uuid", "metadata"],
-      "additionalProperties": false
+      "required": ["uuid", "metadata"]
     },
     "oscal-component-definition-oscal-component-definition:import-component-definition": {
       "title": "Import Component Definition",
@@ -52,8 +51,7 @@
           "$ref": "#/definitions/URIReferenceDatatype"
         }
       },
-      "required": ["href"],
-      "additionalProperties": false
+      "required": ["href"]
     },
     "oscal-component-definition-oscal-component-definition:defined-component": {
       "title": "Component",
@@ -115,8 +113,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["uuid", "type", "title", "description"],
-      "additionalProperties": false
+      "required": ["uuid", "type", "title", "description"]
     },
     "oscal-component-definition-oscal-component-definition:capability": {
       "title": "Capability",
@@ -165,8 +162,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["uuid", "name", "description"],
-      "additionalProperties": false
+      "required": ["uuid", "name", "description"]
     },
     "oscal-component-definition-oscal-component-definition:incorporates-component": {
       "title": "Incorporates Component",
@@ -185,8 +181,7 @@
           "type": "string"
         }
       },
-      "required": ["component-uuid", "description"],
-      "additionalProperties": false
+      "required": ["component-uuid", "description"]
     },
     "oscal-component-definition-oscal-component-definition:control-implementation": {
       "title": "Control Implementation Set",
@@ -234,8 +229,7 @@
           }
         }
       },
-      "required": ["uuid", "source", "description", "implemented-requirements"],
-      "additionalProperties": false
+      "required": ["uuid", "source", "description", "implemented-requirements"]
     },
     "oscal-component-definition-oscal-component-definition:implemented-requirement": {
       "title": "Control Implementation",
@@ -287,8 +281,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["uuid", "control-id", "description"],
-      "additionalProperties": false
+      "required": ["uuid", "control-id", "description"]
     },
     "oscal-component-definition-oscal-component-definition:statement": {
       "title": "Control Statement Implementation",
@@ -328,8 +321,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["statement-id", "uuid", "description"],
-      "additionalProperties": false
+      "required": ["statement-id", "uuid", "description"]
     },
     "oscal-component-definition-oscal-implementation-common:system-component": {
       "title": "Component",
@@ -395,8 +387,7 @@
             },
             "remarks": { "$ref": "#field_oscal-metadata_remarks" }
           },
-          "required": ["state"],
-          "additionalProperties": false
+          "required": ["state"]
         },
         "responsible-roles": {
           "type": "array",
@@ -410,8 +401,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["uuid", "type", "title", "description", "status"],
-      "additionalProperties": false
+      "required": ["uuid", "type", "title", "description", "status"]
     },
     "oscal-component-definition-oscal-implementation-common:protocol": {
       "title": "Service Protocol Information",
@@ -442,8 +432,7 @@
           }
         }
       },
-      "required": ["name"],
-      "additionalProperties": false
+      "required": ["name"]
     },
     "oscal-component-definition-oscal-implementation-common:port-range": {
       "title": "Port Range",
@@ -470,8 +459,7 @@
             { "enum": ["TCP", "UDP"] }
           ]
         }
-      },
-      "additionalProperties": false
+      }
     },
     "oscal-component-definition-oscal-implementation-common:implementation-status": {
       "title": "Implementation Status",
@@ -486,8 +474,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["state"],
-      "additionalProperties": false
+      "required": ["state"]
     },
     "oscal-component-definition-oscal-implementation-common:system-user": {
       "title": "System User",
@@ -539,8 +526,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["uuid"],
-      "additionalProperties": false
+      "required": ["uuid"]
     },
     "oscal-component-definition-oscal-implementation-common:authorized-privilege": {
       "title": "Privilege",
@@ -566,8 +552,7 @@
           }
         }
       },
-      "required": ["title", "functions-performed"],
-      "additionalProperties": false
+      "required": ["title", "functions-performed"]
     },
     "oscal-component-definition-oscal-implementation-common:function-performed": {
       "title": "Functions Performed",
@@ -638,14 +623,12 @@
               },
               "remarks": { "$ref": "#field_oscal-metadata_remarks" }
             },
-            "required": ["component-uuid"],
-            "additionalProperties": false
+            "required": ["component-uuid"]
           }
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["uuid", "description"],
-      "additionalProperties": false
+      "required": ["uuid", "description"]
     },
     "oscal-component-definition-oscal-implementation-common:set-parameter": {
       "title": "Set Parameter Value",
@@ -669,8 +652,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["param-id", "values"],
-      "additionalProperties": false
+      "required": ["param-id", "values"]
     },
     "oscal-component-definition-oscal-implementation-common:system-id": {
       "title": "System Identification",
@@ -685,8 +667,7 @@
         },
         "id": { "type": "string" }
       },
-      "required": ["id"],
-      "additionalProperties": false
+      "required": ["id"]
     },
     "oscal-component-definition-oscal-metadata:metadata": {
       "title": "Document Metadata",
@@ -736,8 +717,7 @@
               },
               "remarks": { "$ref": "#field_oscal-metadata_remarks" }
             },
-            "required": ["version"],
-            "additionalProperties": false
+            "required": ["version"]
           }
         },
         "document-ids": {
@@ -795,8 +775,7 @@
               },
               "remarks": { "$ref": "#field_oscal-metadata_remarks" }
             },
-            "required": ["id", "title"],
-            "additionalProperties": false
+            "required": ["id", "title"]
           }
         },
         "locations": {
@@ -849,8 +828,7 @@
               },
               "remarks": { "$ref": "#field_oscal-metadata_remarks" }
             },
-            "required": ["uuid"],
-            "additionalProperties": false
+            "required": ["uuid"]
           }
         },
         "parties": {
@@ -900,8 +878,7 @@
                     },
                     "id": { "type": "string" }
                   },
-                  "required": ["id", "scheme"],
-                  "additionalProperties": false
+                  "required": ["id", "scheme"]
                 }
               },
               "props": {
@@ -945,8 +922,7 @@
               },
               "remarks": { "$ref": "#field_oscal-metadata_remarks" }
             },
-            "required": ["uuid", "type"],
-            "additionalProperties": false
+            "required": ["uuid", "type"]
           }
         },
         "responsible-parties": {
@@ -961,8 +937,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["title", "last-modified", "version", "oscal-version"],
-      "additionalProperties": false
+      "required": ["title", "last-modified", "version", "oscal-version"]
     },
     "oscal-component-definition-oscal-metadata:location-uuid": {
       "title": "Location Universally Unique Identifier Reference",
@@ -1042,8 +1017,7 @@
                     "items": { "$ref": "#assembly_oscal-metadata_link" }
                   }
                 },
-                "required": ["text"],
-                "additionalProperties": false
+                "required": ["text"]
               },
               "rlinks": {
                 "type": "array",
@@ -1069,8 +1043,7 @@
                       "items": { "$ref": "#field_oscal-metadata_hash" }
                     }
                   },
-                  "required": ["href"],
-                  "additionalProperties": false
+                  "required": ["href"]
                 }
               },
               "base64": {
@@ -1099,8 +1072,7 @@
             "additionalProperties": false
           }
         }
-      },
-      "additionalProperties": false
+      }
     },
     "oscal-component-definition-oscal-metadata:property": {
       "title": "Property",
@@ -1144,8 +1116,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["name", "value"],
-      "additionalProperties": false
+      "required": ["name", "value"]
     },
     "oscal-component-definition-oscal-metadata:link": {
       "title": "Link",
@@ -1174,8 +1145,7 @@
           "type": "string"
         }
       },
-      "required": ["href"],
-      "additionalProperties": false
+      "required": ["href"]
     },
     "oscal-component-definition-oscal-metadata:responsible-party": {
       "title": "Responsible Party",
@@ -1205,8 +1175,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["role-id", "party-uuids"],
-      "additionalProperties": false
+      "required": ["role-id", "party-uuids"]
     },
     "oscal-component-definition-oscal-metadata:action": {
       "title": "Action",
@@ -1251,8 +1220,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["uuid", "type", "system"],
-      "additionalProperties": false
+      "required": ["uuid", "type", "system"]
     },
     "oscal-component-definition-oscal-metadata:responsible-role": {
       "title": "Responsible Role",
@@ -1282,8 +1250,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["role-id"],
-      "additionalProperties": false
+      "required": ["role-id"]
     },
     "oscal-component-definition-oscal-metadata:hash": {
       "title": "Hash",
@@ -1298,8 +1265,7 @@
         },
         "value": { "type": "string" }
       },
-      "required": ["value", "algorithm"],
-      "additionalProperties": false
+      "required": ["value", "algorithm"]
     },
     "oscal-component-definition-oscal-metadata:remarks": {
       "title": "Remarks",
@@ -1350,8 +1316,7 @@
         },
         "number": { "type": "string" }
       },
-      "required": ["number"],
-      "additionalProperties": false
+      "required": ["number"]
     },
     "oscal-component-definition-oscal-metadata:address": {
       "title": "Address",
@@ -1389,8 +1354,7 @@
           "description": "The ISO 3166-1 alpha-2 country code for the mailing address.",
           "$ref": "#/definitions/StringDatatype"
         }
-      },
-      "additionalProperties": false
+      }
     },
     "oscal-component-definition-oscal-metadata:addr-line": {
       "title": "Address line",
@@ -1411,8 +1375,7 @@
         },
         "identifier": { "type": "string" }
       },
-      "required": ["identifier"],
-      "additionalProperties": false
+      "required": ["identifier"]
     },
     "oscal-component-definition-oscal-control-common:part": {
       "title": "Part",
@@ -1466,8 +1429,7 @@
           "items": { "$ref": "#assembly_oscal-metadata_link" }
         }
       },
-      "required": ["name"],
-      "additionalProperties": false
+      "required": ["name"]
     },
     "oscal-component-definition-oscal-control-common:parameter": {
       "title": "Parameter",
@@ -1534,8 +1496,7 @@
         },
         "remarks": { "$ref": "#field_oscal-metadata_remarks" }
       },
-      "required": ["id"],
-      "additionalProperties": false
+      "required": ["id"]
     },
     "oscal-component-definition-oscal-control-common:parameter-constraint": {
       "title": "Constraint",
@@ -1563,12 +1524,10 @@
               },
               "remarks": { "$ref": "#field_oscal-metadata_remarks" }
             },
-            "required": ["expression"],
-            "additionalProperties": false
+            "required": ["expression"]
           }
         }
-      },
-      "additionalProperties": false
+      }
     },
     "oscal-component-definition-oscal-control-common:parameter-guideline": {
       "title": "Guideline",
@@ -1582,8 +1541,7 @@
           "type": "string"
         }
       },
-      "required": ["prose"],
-      "additionalProperties": false
+      "required": ["prose"]
     },
     "oscal-component-definition-oscal-control-common:parameter-value": {
       "title": "Parameter Value",
@@ -1615,15 +1573,13 @@
             "type": "string"
           }
         }
-      },
-      "additionalProperties": false
+      }
     },
     "oscal-component-definition-oscal-control-common:include-all": {
       "title": "Include All",
       "description": "Include all controls from the imported catalog or profile resources.",
       "$id": "#assembly_oscal-control-common_include-all",
-      "type": "object",
-      "additionalProperties": false
+      "type": "object"
     },
     "Base64Datatype": {
       "type": "string",
@@ -1632,12 +1588,10 @@
     },
     "DateTimeWithTimezoneDatatype": {
       "type": "string",
-      "format": "date-time",
       "pattern": "^(((2000|2400|2800|(19|2[0-9](0[48]|[2468][048]|[13579][26])))-02-29)|(((19|2[0-9])[0-9]{2})-02-(0[1-9]|1[0-9]|2[0-8]))|(((19|2[0-9])[0-9]{2})-(0[13578]|10|12)-(0[1-9]|[12][0-9]|3[01]))|(((19|2[0-9])[0-9]{2})-(0[469]|11)-(0[1-9]|[12][0-9]|30)))T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.[0-9]*[1-9])?(Z|(-((0[0-9]|1[0-2]):00|0[39]:30)|\\+((0[0-9]|1[0-4]):00|(0[34569]|10):30|(0[58]|12):45)))$"
     },
     "EmailAddressDatatype": {
       "type": "string",
-      "format": "email",
       "pattern": "^.+@.+$"
     },
     "IntegerDatatype": { "type": "integer" },
@@ -1655,10 +1609,9 @@
     },
     "URIDatatype": {
       "type": "string",
-      "format": "uri",
       "pattern": "^[a-zA-Z][a-zA-Z0-9+\\-.]+:.+$"
     },
-    "URIReferenceDatatype": { "type": "string", "format": "uri-reference" },
+    "URIReferenceDatatype": { "type": "string" },
     "UUIDDatatype": {
       "type": "string",
       "description": "A type 4 ('random' or 'pseudorandom') or type 5 UUID per RFC 4122.",
@@ -1670,7 +1623,5 @@
       "$ref": "#assembly_oscal-component-definition_component-definition"
     }
   },
-  "required": ["component-definition"],
-  "additionalProperties": false,
-  "maxProperties": 1
+  "required": ["component-definition"]
 }
