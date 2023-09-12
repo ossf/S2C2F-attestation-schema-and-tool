@@ -28,25 +28,29 @@
   <title>Use public package managers trusted by your organization (i.e. NuGet.org, npmjs.com, PyPi.org, etc.)</title>
   <prop name="label" value="ING-1"/>
   <prop name="sort-id" value="ing-1"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="1"/>
   <part name="statement" id="ing-1_stmt">
    <p>Your organization benefits from the inherent security provided by the chosen trusted public package manager. Consuming open source from other sources should be deeped risky.</p>
   </part><control id="ing-2">
   <title>Use an OSS binary repository manager solution (i.e. JFrog Artifactory, Azure Artifacts, etc.)</title>
   <prop name="label" value="ING-2"/>
   <prop name="sort-id" value="ing-2"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="1"/>
   <part name="statement" id="ing-2_stmt">
    <p>Caches a local copy of the OSS artifact and protects against left-pad incidents, enabling developers to continue to build even if upstream resources are unavailable.</p>
   </part><control id="ing-3">
   <title>Have a Deny List capability to block known malicious OSS from being consumed</title>
   <prop name="label" value="ING-3"/>
   <prop name="sort-id" value="ing-3"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="3"/>
   <part name="statement" id="ing-3_stmt">
    <p>Prevents ingestion of known malware by blocking ingestion as soon as a critically vulnerable OSS component is identified, such as colors v 1.4.1, or if an OSS component is deemed malicious.</p>
   </part><control id="ing-4">
   <title>Mirror a copy of all OSS source code to an internal location</title>
   <prop name="label" value="ING-4"/>
   <prop name="sort-id" value="ing-4"/>
-  <part name="statement" id="ing-4_stmt">
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="3"/>
+   <part name="statement" id="ing-4_stmt">
    <p>Business Continuity and Disaster Recovery (BCDR) scenarios. Also enables proactive security scanning, fix it scenarios, and ability to rebuild OSS in a trusted build environment.</p>
   </part>
   </control>
@@ -60,30 +64,35 @@
   <title>Scan OSS for known vulnerabilities (i.e. CVEs, GitHub Advisories, etc.)</title>
   <prop name="label" value="SCA-1"/>
   <prop name="sort-id" value="sca-1"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="1"/>
   <part name="statement" id="sca-1_stmt">
    <p>Able to update OSS to reduce risks.</p>
   </part><control id="sca-2">
   <title>Scan OSS for licenses</title>
   <prop name="label" value="SCA-2"/>
   <prop name="sort-id" value="sca-2"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="1"/>
   <part name="statement" id="sca-2_stmt">
    <p>Ensure your organization remains in compliance with the software license.</p>
   </part><control id="sca-3">
   <title>Scan OSS to determine if its end-of-life</title>
   <prop name="label" value="SCA-3"/>
   <prop name="sort-id" value="sca-3"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="2"/>
   <part name="statement" id="sca-3_stmt">
    <p>"For security purposes, no organization should take a dependency on software that is no longer receiving updates.</p>
   </part><control id="sca-4">
   <title>Scan OSS for malware</title>
   <prop name="label" value="SCA-4"/>
   <prop name="sort-id" value="sca-4"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="3"/>
   <part name="statement" id="sca-4_stmt">
    <p>Able to prevent ingestion of malware into your CI/CD environment.</p>
   </part><control id="sca-5">
   <title>Perform proactive security review of OSS</title>
   <prop name="label" value="SCA-5"/>
   <prop name="sort-id" value="sca-5"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="3"/>
   <part name="statement" id="sca-5_stmt">
    <p>Identify zero-day vulnerabilities and confidentially contribute fixes back to the upstream maintainer.</p>
   </part>
@@ -98,12 +107,14 @@
   <title>Maintain an automated inventory of all OSS used in development</title>
   <prop name="label" value="inv-1"/>
   <prop name="sort-id" value="inv-1"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="1"/>
   <part name="statement" id="inv-1_stmt">
    <p>Able to respond to incidents by knowing who is using what OSS where. This can also be accomplished by generating SBOMs for your software.</p>
   </part><control id="inv-2">
   <title>Have an OSS Incident Response Plan</title>
   <prop name="label" value="INV-2"/>
   <prop name="sort-id" value="inv-2"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="2"/>
   <part name="statement" id="inv-2_stmt">
    <p>This is a defined, repeatable process that enables your organization to quickly respond to reported OSS incidents.</p>
    </part>
@@ -118,18 +129,21 @@
   <title>Update vulnerable OSS manually</title>
   <prop name="label" value="UPD-1"/>
   <prop name="sort-id" value="upd-1"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="1"/>
   <part name="statement" id="upd-1_stmt">
    <p>Ability to resolve vulnerabilities.</p>
   </part><control id="upd-2">
   <title>Enable automated OSS updates</title>
   <prop name="label" value="UPD-2"/>
   <prop name="sort-id" value="upd-2"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="2"/>
   <part name="statement" id="upd-2_stmt">
    <p>Improve MTTR to patch faster than adversaries can operate.</p>
   </part><control id="upd-3">
   <title>Display OSS vulnerabilities as comments in Pull Requests (PRs).</title>
   <prop name="label" value="UPD-3"/>
   <prop name="sort-id" value="upd-3"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="2"/>
   <part name="statement" id="upd-3_stmt">
    <p>PR reviewer doesn't want to approve knowing that there are unaddressed vulnerabilities.</p>
   </part>
@@ -144,24 +158,28 @@
   <title>Verify the provenance of your OSS</title>
   <prop name="label" value="AUD-1"/>
   <prop name="sort-id" value="aud-1"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="3"/>
   <part name="statement" id="aud-1_stmt">
    <p>Able to track that a given OSS package traces back to a repo</p>
   </part><control id="aud-2">
   <title>Audit that developers are consuming OSS through the approved ingestion method</title>
   <prop name="label" value="AUD-2"/>
   <prop name="sort-id" value="aud-2"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="2"/>
   <part name="statement" id="aud-2_stmt">
    <p>Detect when developers consume OSS that isn't detected by your inventory or scan tools.</p>
    </part><control id="aud-3">
   <title>Validate integrity of the OSS that you consume into your build</title>
   <prop name="label" value="AUD-3"/>
   <prop name="sort-id" value="aud-3"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="2"/>
   <part name="statement" id="aud-3_stmt">
    <p>Validate digital signature or hash match for each component</p>
    </part><control id="aud-4">
   <title>Validate SBOMs of OSS that you consume into your build</title>
   <prop name="label" value="AUD-4"/>
   <prop name="sort-id" value="aud-4"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="4"/>
   <part name="statement" id="aud-4_stmt">
    <p>Validate SBOM for provenance data, dependencies, and its digital signature for SBOM integrity</p> 
    </part>
@@ -176,12 +194,14 @@
   <title>Securely configure your package source files (i.e. nuget.config, .npmrc, pip.conf, pom.xml, etc.)</title>
   <prop name="label" value="ENF-1"/>
   <prop name="sort-id" value="enf-1"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="2"/>
   <part name="statement" id="enf-1_stmt">
    <p>By using NuGet package source mapping, or a single upstream feed, or using version pinning and lock files, you can protect yourself from race conditions and Dependency Confusion attacks</p>
   </part><control id="enf-2">
   <title>Enforce usage of a curated OSS feed that enhances the trust of your OSS</title>
   <prop name="label" value="ENF-2"/>
   <prop name="sort-id" value="enf-2"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="3"/>
   <part name="statement" id="enf-2_stmt">
    <p>Curated OSS feeds can be systems that scan OSS for malware, validate claims-metadata about the component, or systems that enforce an allow/deny list. Developers should not be allowed to consume OSS outside of the curated OSS feed</p>
    </part>
@@ -196,24 +216,28 @@
   <title>Rebuild the OSS in a trusted build environment, or validate that it is reproducibly built.</title>
   <prop name="label" value="REB-1"/>
   <prop name="sort-id" value="reb-1"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="4"/>
   <part name="statement" id="reb-1_stmt">
    <p>Mitigates against build-time attacks such as those seen on CCleaner and SolarWinds. Open Source developers could introduce scripts or code that aren't present in the repository into the build process or be building in a compromised environment.</p>
   </part><control id="reb-2">
   <title>Digitally sign the OSS you rebuild</title>
   <prop name="label" value="REB-2"/>
   <prop name="sort-id" value="reb-2"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="4"/>
   <part name="statement" id="reb-2_stmt">
    <p>Protect the integrity of the OSS you use.</p>
    </part><control id="reb-3">
   <title>Generate SBOMs for OSS that you rebuild</title>
   <prop name="label" value="REB-3"/>
   <prop name="sort-id" value="reb-3"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="4"/>
   <part name="statement" id="reb-3_stmt">
    <p>Captures the supply chain information for each package to enable you to better maintain your dependencies, auditability, and blast radius assessments</p>
    </part><control id="reb-4">
   <title>Digitally sign the SBOMs you produce</title>
   <prop name="label" value="REB-4"/>
   <prop name="sort-id" value="reb-4"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="4"/>
   <part name="statement" id="reb-4_stmt">
    <p>Ensures that consumers of your SBOMs can trust that the contents have not been tampered with</p> 
      </part>
@@ -228,6 +252,7 @@
   <title>Implement a change in the code to address a zero-day vulnerability, rebuild, deploy to your organization, and confidentially contribute the fix to the upstream maintainer</title>
   <prop name="label" value="FIX-1"/>
   <prop name="sort-id" value="fix-1"/>
+  <prop ns="https://github.com/ossf/s2c2f/blob/main/specification/framework.md" name="maturity-level" value="4"/>
   <part name="statement" id="fix-1_stmt">
    <p>To be used only in extreme circumstances when the risk is too great and to be used temporarily until the upstream maintainer issues a fix.</p>
   </part>
