@@ -1,29 +1,29 @@
 # **S2C2F Attestation Schema and Tool**
 
-[This tool and schema are initiated by the OpenSSF Supply Chain Integrity Working Group, S2C2F SIG, as part of the 2023 Microsoft Global Hackathon.]
+This tool and schema are initiated by the OpenSSF Supply Chain Integrity Working Group, S2C2F SIG, as part of the 2023 Microsoft Global Hackathon.
 
 
 ## 
 **Motivation**
 
-[This tool is being developed to provide a way to use Github Actions to assure meeting control requirements up to Level 2 of the S2C2F]
+This tool is being developed to provide a way to use Github Actions to assure meeting control requirements up to Level 2 of the S2C2F
 
 
 ## 
 **Objective**
 
-[The objective is to provide PM's a way to define requirements for attestation based on gaps identified by the tool. 
+The objective is to provide PM's a way to define requirements for attestation based on gaps identified by the tool. 
 
 
 ## 
 **Scope**
 
-[1. Finalize S2C2F requirements for the project
+1. Finalize S2C2F requirements for the project
 2. Create an OSCAL format catalog model in JSON/XML
 3. Validate the JSON/XML Model
 4. Test tool on an Open Control Repo
 5. Read JSON XML and perform gap analysis against the catalog model
-5. Requirements for attestation are defined based on gap analysis]
+5. Requirements for attestation are defined based on gap analysis
 
 
 ### 
