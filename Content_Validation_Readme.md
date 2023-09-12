@@ -6,4 +6,4 @@ Additionally, OSCAL Project from NIST also maintain a repository of tools at htt
 
 Functionality archived tools from OSCAL project include:
 
-`oscal-content-validator.py` - a Python shell for configuration and running (XML and JSON )schema validation. We are using this for our project to validate the XML and JSON schemas.
+`oscal-content-validator.py` - a Python shell for configuration and running (XML and JSON )schema validation. We are using this for our project to validate the OSCAL content.
