@@ -1,0 +1,61 @@
+{
+  "component-definition": {
+    "uuid": "e20c5364-2d07-46d8-864a-93d954477f21",
+    "type": "software",
+    "metadata": {
+      "title": "API Endpoint Request Component Definition Example",
+      "last-modified": "2023-09-13T09:30:47Z",
+      "version": 20230913,
+      "oscal-version": "1.0.6",
+      "roles": [
+        {
+          "id": "provider",
+          "title": "Provider"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "c84615f1-3221-4813-94f3-e73eef62c1f1",
+          "type": "organization",
+          "name": "API EndPoint",
+          "purpose": "API EndPoint",
+          "links": [
+            {
+              "href": "https://www.dummmy.com",
+              "rel": "website"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "uuid": "e80a306a-f45c-446d-b11e-2eb20110abc3",
+      "type": "software",
+      "title": "API Request",
+      "description": "API Request.",
+      "purpose": "Provides application to request API.",
+      "responsible-roles": [
+        {
+          "role-id": "provider",
+          "party-uuids": ["c84615f1-3221-4813-94f3-e73eef62c1f1"]
+        }
+      ]
+    }
+  ],
+  "control-implementations": [
+    {
+      "uuid": "bb04d23c-9107-462e-84cd-de974b179387",
+      "source": "https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/oscal_json/s2c2f_oscal_catalog_1.6.json",
+      "description": "API Request.",
+      "implemented-requirements": [
+        {
+          "uuid": "bb04d23c-9107-462e-84cd-de974b179387",
+          "control-id": "ING-1",
+          "description": "API request is using pip as package manager and packages are downloaded from pypi.org."
+        }
+      ]
+    }
+  ]
+}
