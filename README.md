@@ -44,7 +44,7 @@ The [CHARTER.md](https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/
 
 
 [OPTIONAL]
-*   Adrian Diglio 
+*   Adrian Diglia 
 *   Jay White
 
 #
