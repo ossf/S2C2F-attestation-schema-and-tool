@@ -10,6 +10,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - run: npm ci
+    - run: npm test
+
+    - name: Install validator
+      run: npm install -g ajv-formats ajv-cli
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -20,3 +29,6 @@ jobs:
 
     - name: Run tests
       run: python -m unittest discover
+
+    - name: Validate component definition
+      run: ajv validate -s schemas/oscal_component_schema.json -d component_definition/component_definition.json
