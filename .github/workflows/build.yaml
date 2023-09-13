@@ -29,4 +29,7 @@ jobs:
       run: python -m unittest discover
 
     - name: Validate component definition
-      run: ajv validate -s schemas/oscal_component_schema.json -d component_definition/component_definition.json
+      run:
+        tree
+        cd oscal
+        ajv validate -s schemas/oscal_component_schema.json -d component_definition/component_definition.json
