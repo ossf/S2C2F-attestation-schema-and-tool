@@ -31,5 +31,4 @@ jobs:
     - name: Validate component definition
       working-directory: ./oscal
       run: |
-        tree
         ajv validate -s schemas/oscal_component_schema.json -d component_definition/component_definition.json
