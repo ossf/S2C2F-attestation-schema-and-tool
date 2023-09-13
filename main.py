@@ -1,3 +1,5 @@
+"""Main component to perform a search on Bing using the requests library."""
+
 import requests
 
 url = "https://www.bing.com/search?q=oscal"
