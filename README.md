@@ -14,7 +14,7 @@ Building a tool that captures the security configuration of the development envi
 ## 
 **Objective**
 
-This tool is being developed to provide a way to use Github Actions to assess a GitHub repo's implementation of S2C2F control requirements up to Maturity Level 2, and outputting the results in a machine-readable JSON file in OSCAL format. 
+This tool is being developed to provide a way to use GitHub Actions to assess a GitHub repo's implementation of S2C2F control requirements up to Maturity Level 2, and outputting the results in a machine-readable JSON file in OSCAL format. 
 
 
 ## 
