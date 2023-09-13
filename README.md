@@ -1,18 +1,20 @@
 # **S2C2F Attestation Schema and Tool**
 
-This tool and schema are initiated by the OpenSSF Supply Chain Integrity Working Group, S2C2F SIG, as part of the 2023 Microsoft Global Hackathon.
+<img alt="secure package icon" src="images/secure-package-icon.png" width=15%>
+
+This project is initiated by the OpenSSF Supply Chain Integrity Working Group, S2C2F SIG, as part of the 2023 Microsoft Global Hackathon. The scope of this effort is to use [NIST OSCAL](https://pages.nist.gov/OSCAL/) as the machine-reable schema, and producing a GitHub compatible tool that analyzes a GitHub repo for meeting [Secure Supply Chain Consumption Framework (S2C2F)](https://github.com/ossf/s2c2f/tree/main) requirements and outputs the results in OSCAL format.
 
 
 ## 
 **Motivation**
 
-This tool is being developed to provide a way to use Github Actions to assure meeting control requirements up to Level 2 of the S2C2F
+Building a tool that captures the security configuration of the development environment for a specific software project against a set of requirements (such as S2C2F) and outputs the results in machine-readable format (OSCAL) is the future of software transparency.
 
 
 ## 
 **Objective**
 
-The objective is to provide PM's a way to define requirements for attestation based on gaps identified by the tool. 
+This tool is being developed to provide a way to use GitHub Actions to assess a GitHub repo's implementation of S2C2F control requirements up to Maturity Level 2, and outputting the results in a machine-readable JSON file in OSCAL format. 
 
 
 ## 
@@ -29,7 +31,7 @@ The objective is to provide PM's a way to define requirements for attestation ba
 ### 
 **Quick Start**
 
-*   Create Issues Please
+*   Create Issues to track Feature requests
 *   Pull requests are monitored in real time
 
 ## 
@@ -44,7 +46,7 @@ The [CHARTER.md](https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/
 
 
 [OPTIONAL]
-*   Adrian Diglia 
+*   Adrian Diglio 
 *   Jay White
 
 #
