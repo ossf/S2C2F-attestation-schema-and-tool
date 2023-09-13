@@ -7,8 +7,7 @@
 			"last-modified": "2023-09-11T13:57:28.355446-04:00",
 			"version": "1.1",
 			"oscal-version": "1.0.6",
-			"remarks": "The following controls represent the S2C2F v1.1 (https://github.com/ossf/s2c2f/blob/main/specification/framework.md) for the purposes of assessing secure development pracices in alignment with S2C2F requirements for a given software project or product*. Copyrights for this work are held by the Linux Foundation Open Source Security Foundation (OpenSSF).",
-			"link": "https://github.com/ossf/s2c2f/"
+			"remarks": "The following controls represent the S2C2F v1.1 (https://github.com/ossf/s2c2f/blob/main/specification/framework.md) for the purposes of assessing secure development pracices in alignment with S2C2F requirements for a given software project or product*. Copyrights for this work are held by the Linux Foundation Open Source Security Foundation (OpenSSF)."
 		},
 		"groups": [
 		  {
