@@ -1,0 +1,30 @@
+import pandas as pd
+import json
+
+def convert_xls_to_custom_json(file_path):
+    # Read Excel file into a pandas DataFrame
+    df = pd.read_excel(file_path)
+
+    # Convert DataFrame to custom JSON format
+    custom_data = {
+        "header": list(df.columns),
+        "data": df.to_dict(orient='records')
+    }
+
+    # Convert custom data to JSON
+    custom_json = json.dumps(custom_data, indent=2)
+
+    return custom_json
+
+# Specify the path to your Excel file
+xls_file_path = 'path/to/your/file.xls'
+
+# Convert XLS to custom JSON
+result_json = convert_xls_to_custom_json(xls_file_path)
+
+# Print or save the generated JSON
+print(result_json)
+
+# If you want to save the JSON to a file
+# with open("output.json", "w") as json_file:
+#     json_file.write(result_json)
