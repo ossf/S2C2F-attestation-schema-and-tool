@@ -59,7 +59,7 @@ security-contacts:
 vulnerability-reporting:
   accepts-vulnerability-reports: true
   email-contact: adrian.diglio@microsoft.com
-  security-policy: https://github.com/ossf/S2C2F-attestation-schema-and-tool/security.md
+  security-policy: https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/security.md
 dependencies:
   third-party-packages: true
   dependencies-lists:
