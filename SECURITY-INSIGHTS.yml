@@ -25,7 +25,7 @@ contribution-policy:
   automated-tools-list:
   - automated-tool: Dependabot
     action: allowed
-  contributing-policy: https://github.com/ossf/S2C2F-attestation-schema-and-tool/contributing.md
+  contributing-policy: https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/contributing.md
   code-of-conduct: https://www.contributor-covenant.org/version/2/0/code_of_conduct/
 documentation:
   - https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/README_Oscal_Validator.md
