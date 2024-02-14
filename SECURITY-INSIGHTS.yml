@@ -10,7 +10,7 @@ header:
   license: https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/LICENSE
 project-lifecycle:
   status: active
-  roadmap: https://github.com/ossf/S2C2F-attestation-schema-and-tool/roadmap.md
+  roadmap: https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/ROADMAP.md
   bug-fixes-only: false
   core-maintainers:
   - https://github.com/adriandiglio
