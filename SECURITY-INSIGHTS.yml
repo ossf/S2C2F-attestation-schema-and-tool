@@ -1,0 +1,66 @@
+header:
+  schema-version: 1.0.0
+  expiration-date: '2025-02-13T10:10:09.000Z'
+  last-updated: '2024-02-13'
+  last-reviewed: '2024-02-13'
+  commit-hash: bcbdfd5dfe0a105be02dabd503a67c55e2fa3344
+  project-url: https://github.com/ossf/S2C2F-attestation-schema-and-tool
+  project-release: '0.0.0'
+  changelog: https://github.com/ossf/S2C2F-attestation-schema-and-tool/changelog.md
+  license: https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/LICENSE
+project-lifecycle:
+  status: active
+  roadmap: https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/ROADMAP.md
+  bug-fixes-only: false
+  core-maintainers:
+  - https://github.com/adriandiglio
+  - https://github.com/camaleon2016
+  - https://github.com/yogitasrivastava
+  release-cycle: https://github.com/ossf/S2C2F-attestation-schema-and-tool/releases
+  release-process: To be planned for release as a GitHub Action, and published into the GitHub Marketplace.
+  status: WIP
+contribution-policy:
+  accepts-pull-requests: true
+  accepts-automated-pull-requests: true
+  automated-tools-list:
+  - automated-tool: Dependabot
+    action: allowed
+  contributing-policy: https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/contributing.md
+  code-of-conduct: https://www.contributor-covenant.org/version/2/0/code_of_conduct/
+documentation:
+  - https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/README_Oscal_Validator.md
+distribution-points:
+  - pkg:github/ossf/S2C2F-attestation-schema-and-tool@0.0.0
+security-artifacts:
+  threat-model:
+    threat-model-created: false
+    comment: tool design is not yet complete
+  self-assessment:
+    self-assessment-created: false
+    comment: tool design is not yet complete
+security-testing:
+- tool-type: sca
+  tool-name: Dependabot
+  tool-version: latest
+  tool-url: https://docs.github.com/en/code-security/dependabot/working-with-dependabot
+  tool-rulesets:
+  - built-in
+  integration:
+    ad-hoc: false
+    ci: true
+    before-release: true
+security-contacts:
+- type: email
+  value: adrian.diglio@microsoft.com
+  primary: true
+- type: email
+  value: jaywhite@microsoft.com
+  primary: false
+vulnerability-reporting:
+  accepts-vulnerability-reports: true
+  email-contact: adrian.diglio@microsoft.com
+  security-policy: https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/security.md
+dependencies:
+  third-party-packages: true
+  dependencies-lists:
+  - https://github.com/ossf/S2C2F-attestation-schema-and-tool/blob/main/requirements.txt
