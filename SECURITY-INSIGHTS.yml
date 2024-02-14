@@ -3,7 +3,7 @@ header:
   expiration-date: '2025-02-13T10:10:09.000Z'
   last-updated: '2024-02-13'
   last-reviewed: '2024-02-13'
-  commit-hash: 4dbf78ebc006ee5f668c0a74876ef8d6db9485be
+  commit-hash: bcbdfd5dfe0a105be02dabd503a67c55e2fa3344
   project-url: https://github.com/ossf/S2C2F-attestation-schema-and-tool
   project-release: '0.0.0'
   changelog: https://github.com/ossf/S2C2F-attestation-schema-and-tool/changelog.md
